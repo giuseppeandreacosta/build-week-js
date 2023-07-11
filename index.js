@@ -128,19 +128,23 @@ const jobs = [
 
 
 
-function searchJobs(jobs,location) {
+function searchJobs(jobSearch,locationSearch) {
   const result = [];
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
-    const titleJobs = job.titleJobs.toLowerCase();
-    const locationJobs = job.locationJobs.toLowerCase();
-    if (titleJobs && locationJobs.includes(location.toLowerCase())) {
-      result.push(job);
-    }
+    // console.log(job)
+    const titleJobs = job.title.toLowerCase();
+    console.log(titleJobs)
+    const locationJobs = job.location.toLowerCase();
+    console.log(locationJobs)
+    if (titleJobs.includes(jobSearch.toLowerCase()) && locationJobs.includes(locationSearch.toLowerCase())){
+      result.push(job)
+  }
   }
   return { result, count: result.length };
 }
 
+searchJobs("dev","US")
 
 
 
