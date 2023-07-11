@@ -125,3 +125,22 @@ const jobs = [
   },
 ]
 
+
+
+
+function searchJobs(jobs, position, location) {
+  const result = [];
+  for (let i = 0; i < jobs.length; i++) {
+    const job = jobs[i];
+    const titleJobs = job.titleJobs.toLowerCase();
+    const locationJobs = job.locationJobs.toLowerCase();
+    if (titleJobs.includes(position.toLowerCase()) && locationJobs.includes(location.toLowerCase())) {
+      result.push(job);
+    }
+  }
+  return { result, count: result.length };
+}
+
+
+
+
