@@ -134,9 +134,9 @@ function searchJobs(jobSearch,locationSearch) {
     const job = jobs[i];
     // console.log(job)
     const titleJobs = job.title.toLowerCase();
-    console.log(titleJobs)
+    // console.log(titleJobs)
     const locationJobs = job.location.toLowerCase();
-    console.log(locationJobs)
+    // console.log(locationJobs)
     if (titleJobs.includes(jobSearch.toLowerCase()) && locationJobs.includes(locationSearch.toLowerCase())){
       result.push(job)
   }
@@ -145,6 +145,6 @@ function searchJobs(jobSearch,locationSearch) {
 }
 
 searchJobs("dev","US")
-
+console.log(searchJobs("dev", "US"));
 
 
