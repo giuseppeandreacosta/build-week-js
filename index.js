@@ -123,12 +123,9 @@ const jobs = [
     title: "English Teacher Abroad",
     location: "US, NY, Saint Bonaventure",
   },
-]
+];
 
-
-
-
-function searchJobs(jobSearch,locationSearch) {
+function searchJobs(jobSearch, locationSearch) {
   const result = [];
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
@@ -137,14 +134,30 @@ function searchJobs(jobSearch,locationSearch) {
     // console.log(titleJobs)
     const locationJobs = job.location.toLowerCase();
     // console.log(locationJobs)
-    if (titleJobs.includes(jobSearch.toLowerCase()) && locationJobs.includes(locationSearch.toLowerCase())){
-      result.push(job)
-  }
+    if (
+      titleJobs.includes(jobSearch.toLowerCase()) &&
+      locationJobs.includes(locationSearch.toLowerCase())
+    ) {
+      result.push(job);
+    }
   }
   return { result, count: result.length };
 }
 
-searchJobs("dev","US")
+searchJobs("dev", "US");
 console.log(searchJobs("dev", "US"));
 
+function search() {
+  const location = document.getElementById("location").value;
+  const jobTitle = document.getElementById("jobTitle").value;
 
+  const data = searchJobs(jobTitle, location).result;
+
+  const resultsList = document.getElementById("results");
+  resultsList.innerHTML = "";
+  for (let i = 0; i < data.length; i++) {
+    let li = document.createElement("li");
+    li.innerText = data[i].title + " - " + data[i].location;
+    resultsList.appendChild(li);
+  }
+}

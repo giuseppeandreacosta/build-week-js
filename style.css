@@ -21,8 +21,8 @@ body {
 }
 
 .text {
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 35px;
     border-radius: 10px;
     background-color: transparent;
     color: white;
@@ -32,13 +32,19 @@ body {
 }
 
 
-.buttonSearch {
+#buttonSearch {
     width: 80px;
-    height: 30px;
+    height: 35px;
     border-radius: 10px;
     background-color: transparent;
     color: white;
     font-size: 15px;
     -webkit-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.45); 
     box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.45);
+}
+
+.list {
+    color:white;
+    text-align: center;
+    font-size: 1.5em;
 }

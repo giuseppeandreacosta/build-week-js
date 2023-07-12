@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>BUILDWEEK - EPICODE</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="inputField">
-            <input class="text" type="text" placeholder="Location">
-            <input class="text" type="text" placeholder="Title">
-        </div>
-        <div class="button">
-            <button class="buttonSearch">Search</button>
-        </div>
+      <div class="inputField">
+        <input id="location" class="text" type="text" placeholder="Location" />
+        <input id="jobTitle" class="text" type="text" placeholder="Title" />
+      </div>
+      <div class="button">
+        <button onclick="search()" id="buttonSearch">Search</button>
+      </div>
     </div>
-    
-
-
-
-
-
+    <div class="list">
+        <ul id="results">
+          
+        </ul>
+      </div>
 
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
