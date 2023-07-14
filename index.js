@@ -150,13 +150,12 @@ console.log(searchJobs("dev", "US"));
 function search() {
   const location = document.getElementById("location").value;
   const jobTitle = document.getElementById("jobTitle").value;
-
+  const resultsList = document.getElementById("results");
   const data = searchJobs(jobTitle, location).result;
 
-  const resultsList = document.getElementById("results");
   resultsList.innerHTML = "";
   for (let i = 0; i < data.length; i++) {
-    let li = document.createElement("li");
+    const li = document.createElement("li");
     li.innerText = data[i].title + " - " + data[i].location;
     resultsList.appendChild(li);
   }
